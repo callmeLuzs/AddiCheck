@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowResultActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:id="@+id/showResultFirstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_back_third"
+                android:layout_width="45dp"
+                android:layout_height="60dp"
+                android:onClick="btn_back_click"
+                android:background="@android:color/transparent"
+                app:icon="@drawable/back"
+                app:iconSize="24dp"
+                app:iconTint="@color/colorPrimary"
+                app:rippleColor="@color/colorAccent"
+                ></com.google.android.material.button.MaterialButton>
+        </RelativeLayout>
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_below="@id/showResultFirstLayout"
+            android:layout_marginTop="0dp"
+            android:listSelector="@color/colorPrimary"
+
+            ></ExpandableListView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/showResultFirstLayout"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            >-->
+    <!--        </RelativeLayout>-->
+
+    <!--        <ListView-->
+    <!--            android:id="@+id/listView"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="500dp"-->
+    <!--            android:layout_below="@id/showResultFirstLayout"-->
+    <!--            >-->
+    <!--        </ListView>-->

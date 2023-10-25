@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        >
+
+        <LinearLayout
+            android:id="@+id/headLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            >
+        </LinearLayout>
+
+        <!--搜索框布局-->
+        <RelativeLayout
+            android:id="@+id/firstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/headLinearLayout"
+            android:orientation="horizontal"
+            >
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_input_text"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                app:iconifiedByDefault="false"
+                app:searchIcon="@drawable/search"
+                app:searchHintIcon="@color/colorPrimary"
+                android:background="@drawable/searchview_border"
+                >
+            </androidx.appcompat.widget.SearchView>
+        </RelativeLayout>
+
+        <!--图片展示按钮布局-->
+        <LinearLayout
+            android:id="@+id/image_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstLayout"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_input_image"
+                android:layout_width="260dp"
+                android:layout_height="250dp"
+                ></ImageView>
+
+        </LinearLayout>
+
+
+        <!--相机按钮布局-->
+        <LinearLayout
+            android:id="@+id/camera_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_view_layout"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_take_photo"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="@string/btn_camera"
+                android:elevation="10dp"
+                app:icon="@drawable/camera"
+                app:iconSize="24dp"
+                app:rippleColor="@color/colorAccent"
+                android:onClick="btn_take_photo_click"
+                app:cornerRadius="15dp"
+                app:iconGravity="textStart"
+                android:backgroundTint="@color/colorButton"
+                android:textColor="@color/colorButtonText"
+                >
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+
+        <!--相册按钮布局-->
+        <LinearLayout
+            android:id="@+id/select_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/camera_layout"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_choice_img"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="@string/btn_photo"
+                app:rippleColor="@color/colorAccent"
+                android:onClick="btn_choice_img_click"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/photo"
+                app:iconGravity="textStart"
+                app:iconSize="27dp"
+                android:backgroundTint="@color/colorButton"
+                android:textColor="@color/colorButtonText"
+                >
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+
+        <!--ocr识别按钮布局-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/select_image_layout"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_analyse"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/colorButton"
+                android:onClick="btn_run_model_click"
+                android:text="@string/btn_ocr"
+                android:textColor="@color/colorButtonText"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/ocr"
+                app:iconSize="24dp"
+                app:iconGravity="textStart"
+                app:rippleColor="@color/colorAccent"></com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--                <Button-->
+    <!--                    android:id="@+id/btn_take_photo"-->
+    <!--                    android:layout_width="62dp"-->
+    <!--                    android:layout_height="44dp"-->
+    <!--                    android:background="@drawable/camera"-->
+    <!--                    android:onClick="btn_take_photo_click"></Button>-->
+    <!--                <Button-->
+    <!--                    android:id="@+id/btn_choice_img"-->
+    <!--                    android:layout_width="66dp"-->
+    <!--                    android:layout_height="55dp"-->
+    <!--                    android:layout_marginLeft="50dp"-->
+    <!--                    android:layout_toRightOf="@id/btn_take_photo"-->
+    <!--                    android:background="@drawable/photo"-->
+    <!--                    android:onClick="btn_choice_img_click"></Button>-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/btn_analyse"-->
+    <!--                android:layout_width="90dp"-->
+    <!--                android:layout_height="80dp"-->
+    <!--                android:background="@drawable/ocr"-->
+    <!--                android:onClick="btn_run_model_click"-->
+    <!--                >-->
+    <!--            </Button>-->
+    <!--            <Button-->
+    <!--                android:id="@+id/btn_search_first"-->
+    <!--                android:layout_width="55dp"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:background="@drawable/search"-->
+    <!--                android:layout_toRightOf="@+id/search_input_text"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:onClick="btn_first_search_click"></Button>-->

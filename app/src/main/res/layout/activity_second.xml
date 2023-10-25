@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:id="@+id/secondBackLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_back"
+                android:layout_width="45dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:onClick="btn_back_click"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/back"
+                app:iconSize="24dp"
+                app:iconTint="@color/colorPrimary"
+                app:rippleColor="@color/colorAccent"></com.google.android.material.button.MaterialButton>
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ocrResult"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_below="@+id/secondBackLayout"
+            android:gravity="center_horizontal"
+            app:counterEnabled="true"
+            android:background="@color/colorBackground"
+            app:counterMaxLength="100">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SecondEditText"
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edit_text_bg"
+                android:gravity="top|left"
+                android:textColor="@color/black"
+                app:rippleColor="@color/black"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/ocrResult"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_query_second"
+                    android:layout_width="350dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorButton"
+                    android:onClick="btn_searchName_click"
+                    android:text="@string/btn_search"
+                    android:textColor="@color/colorButtonText"
+                    app:cornerRadius="15dp"
+                    app:icon="@drawable/analysis"
+                    app:iconGravity="textStart"
+                    app:iconSize="24dp"
+                    app:rippleColor="@color/colorAccent"></com.google.android.material.button.MaterialButton>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/ocrResult"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="300dp"-->
+    <!--            android:layout_below="@id/secondBackLayout"-->
+    <!--            >-->
+    <!--            <EditText-->
+    <!--                android:id="@+id/SecondEditText"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:minHeight="48dp"></EditText>-->
+    <!--        </LinearLayout>-->
+    <!--                <Button-->
+    <!--                    android:id="@+id/btn_insert"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="插入"-->
+    <!--                    android:onClick="btn_insert_click"-->
+    <!--                    >-->
+    <!--                </Button>-->
+    <!--                <Button-->
+    <!--                    android:id="@+id/btn_back"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="返回"-->
+    <!--                    android:onClick="btn_back_click"-->
+    <!--                    >-->
+    <!--                </Button>-->
+    <!--                <Button-->
+    <!--                    android:id="@+id/btn_query_second"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="查询"-->
+    <!--                    android:onClick="btn_searchName_click"-->
+    <!--                    >-->
+    <!--                </Button>-->
+
