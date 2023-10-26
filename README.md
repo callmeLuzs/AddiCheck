@@ -1,6 +1,6 @@
 # Android Demo
 ## 1. 简介
-基于PaddleOCR的Android Demo开发, 为本学期安卓开发作业.
+基于PaddleOCR的Android开发
 
 ## 2.项目技术
 使用git进行版本控制 使用material风格组件
