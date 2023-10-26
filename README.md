@@ -1,7 +1,7 @@
 # Android Demo
 ## 1. 简介
 基于PaddleOCR的Android开发
-
+![img](https://github.com/callmeLuzs/AddiCheck/blob/main/AddiCheck.png)
 ## 2.项目技术
 使用git进行版本控制 使用material风格组件
 
